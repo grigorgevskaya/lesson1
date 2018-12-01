@@ -1,17 +1,19 @@
-def function():
-    pass
 
-a = input()
-b = input()
-if a==str:
-   print(0)
-if b==str:
-    print(0)
-if a==b:
-    print(1)
-elif a>b:
-    print(2)
-if a<b:
-    print(3)
-if b=='learn':
-    print(3)
+def main():
+    first_str = input("Введите первую строку: ")
+    second_str = input("Введите вторую строку: ")
+
+    if type(first_str) != str or type(second_str) != str:
+        return 0
+    elif first_str == second_str:
+        return 1
+    elif first_str > second_str:
+        return 2
+    elif second_str == 'learn':
+        return 3
+    elif first_str < second_str:
+        return 4
+
+
+if __name__ == "__main__":
+    print(main())
