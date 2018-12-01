@@ -1,8 +1,9 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+
 import logging
 
 PROXY={'proxy_url': 'socks5://t1.learn.python.ru:1080',
-    'urllib3_proxy_kwargs': {'username': 'learn', 'password': 'python'}}
+       'urllib3_proxy_kwargs': {'username': 'learn', 'password': 'python'}}
     
 logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO,
@@ -25,6 +26,5 @@ def main():
     mybot.idle()
    
 
-
-
-main()
+if __name__ == "__main__":
+    main()
